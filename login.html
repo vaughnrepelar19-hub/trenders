@@ -118,7 +118,7 @@
     <p class="error" id="errorMsg"></p>
     <div class="signup-link">
       <p>Don’t have an account?
-        <a href="file:///C:/Users/SIHS%20PC7/Desktop/TRENDERS%20official/Sign%20In.html">
+        <a href="index.html">
           Sign Up
         </a>
       </p>
@@ -141,7 +141,7 @@
       const savedPass = localStorage.getItem("password");
 
       if (user === savedUser && pass === savedPass && contact === savedContact) {
-        window.location.href = "file:///C:/Users/SIHS%20PC7/Desktop/TRENDERS%20official/Homepage.html";
+        window.location.href = "homepage.html";
       } else {
         errorMsg.textContent = "Invalid username, contact, or password.";
       }
@@ -149,3 +149,4 @@
   </script>
 </body>
 </html>
+

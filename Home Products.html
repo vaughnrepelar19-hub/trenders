@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trenders - Home Products</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      background: linear-gradient(45deg, #6F7D7B, #6F7D7B);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(45deg, #6F7D7B, #1E3226);
+      color: #fff;
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: linear-gradient(45deg, #1E3226, #6F7D7B);
+    }
+
+    nav a {
+      color: #fff;
+      padding: 1rem 1.5rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .container {
+      width: 85%;
+      margin: 2rem auto;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #fd1d1d, #e1306c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 1.8rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: linear-gradient(135deg, #ffffff, #f3f4f6);
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 1s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .add-to-cart {
+      margin-top: 1rem;
+      background-color: #2575fc;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .add-to-cart:hover {
+      background-color: #1a5ed9;
+    }
+
+    footer {
+      background: linear-gradient(45deg, #1E3226, #6F7D7B);
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="file:///C:/Users/Administrator/Desktop/TRENDERS/homepage.html" style="text-decoration: none; color: white;">
+      <h1>TRENDERS</h1>
+    </a>
+    <p>Stylish | Luxurious | Elegant</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="file:///C:/Users/SIHS%20PC7/Desktop/TRENDERS%20official/Books.html">Books</a>
+    <a href="file:///C:/Users/SIHS%20PC7/Desktop/TRENDERS%20official/Gadgets.html">Gadgets</a>
+    <a href="file:///C:/Users/SIHS%20PC7/Desktop/TRENDERS%20official/Beauty%20And%20Fashion.html">Beauty & Fashion</a>
+    <a href="file:///C:/Users/SIHS%20PC7/Desktop/TRENDERS%20official/Food.html">Food</a>
+    <a href="file:///C:/Users/SIHS%20PC7/Desktop/TRENDERS%20official/Home%20Products.html">Home Products</a>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+
+    <section id="homeproducts">
+      <h2>Top Home Products</h2>
+      <div class="projects">
+
+        <div class="project-card">
+          <img src="https://www.ikea.com/ph/en/images/products/linmon-adils-table-white__0737164_pe740925_s5.jpg" alt="IKEA Minimalist Table">
+          <h3>IKEA LINMON Minimalist Table</h3>
+          <p>A clean, simple design that fits perfectly in any home setup. This sturdy table works great as a study desk, work-from-home space, or a clean centerpiece for your living room. Its smooth surface and slim profile make it easy to blend into modern interiors.</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="project-card">
+          <img src="https://cdn.thewirecutter.com/wp-content/media/2022/06/pillows-2048px-coophomegoodsoriginal-2x1-1.jpg" alt="Cozy Pillow Set">
+          <h3>CozyDream Memory Foam Pillow Set</h3>
+          <p>Sleep better with the CozyDream Memory Foam Pillow Set. It provides perfect head and neck support, improving posture and comfort throughout the night. Soft, breathable covers keep you cool, giving you a refreshing and restful sleep experience.</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="project-card">
+          <img src="https://cdn.shopify.com/s/files/1/0630/8503/9162/products/floorlamp_1024x1024.jpg?v=1667229631" alt="Modern Floor Lamp">
+          <h3>LumaGlow Modern Floor Lamp</h3>
+          <p>Light up your home with the LumaGlow Modern Floor Lamp. With its sleek black design and warm LED light, it instantly adds style and coziness to any space. Ideal for bedrooms, reading corners, or living areas that need soft ambient lighting.</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="project-card">
+          <img src="https://m.media-amazon.com/images/I/61V6QYz6yzL._AC_SL1500_.jpg" alt="Decorative Wall Clock">
+          <h3>Timeless Aura Decorative Wall Clock</h3>
+          <p>The Timeless Aura Wall Clock adds elegance and charm to your home. Its minimalist design complements both modern and classic interiors. More than just a timepiece, it’s a statement décor that enhances the aesthetic of your living space.</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="project-card">
+          <img src="https://www.ikea.com/ph/en/images/products/fejka-artificial-potted-plant-in-outdoor-monstera__0636966_pe698972_s5.jpg" alt="Artificial Plant">
+          <h3>FEJKA Artificial Potted Plant</h3>
+          <p>Bring nature indoors without the maintenance. The FEJKA Artificial Potted Plant adds a touch of greenery to your home, giving a fresh and lively atmosphere to any room. It looks realistic and never needs watering — perfect for busy lifestyles.</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>2025 Trenders. All Rights Reserved ©.</p>
+  </footer>
+
+</body>
+</html>

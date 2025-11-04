@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trenders - Sign Up</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1E3226;
+      color: #333;
+    }
+
+    .signup-box {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      width: 360px;
+      text-align: center;
+    }
+
+    .site-name {
+      font-size: 28px;
+      font-weight: bold;
+      color: #1E3226;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    .input-group {
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-size: 14px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      outline: none;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      background-color: #1E3226;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background-color: #2d4d39;
+    }
+
+    .login-link {
+      margin-top: 1rem;
+      font-size: 14px;
+    }
+
+    .login-link a {
+      color: red;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+
+    #msg {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .error {
+      color: red;
+    }
+
+    .success {
+      color: green;
+    }
+  </style>
+</head>
+
+<body> 
+  <div class="signup-box">
+    <div class="site-name">TRENDERS</div>
+    <h2>Create Account</h2>
+    <form id="signupForm">
+      <div class="input-group">
+        <label for="newUser">Username</label>
+        <input type="text" id="newUser" required>
+      </div>
+      <div class="input-group">
+        <label for="newContact">Contact Number</label>
+        <input type="text" id="newContact" required>
+      </div>
+      <div class="input-group">
+        <label for="newPass">Password</label>
+        <input type="password" id="newPass" required>
+      </div>
+      <div class="input-group">
+        <label for="confirmPass">Confirm Password</label>
+        <input type="password" id="confirmPass" required>
+      </div>
+      <button type="submit" class="btn">Sign Up</button>
+    </form>
+    <p id="msg"></p>
+
+    <div class="login-link">
+      <p>Already have an account? 
+        <a href="file:///C:/Users/SIHS%20PC7/Desktop/TRENDERS%20official/Log%20In.html">
+          Login
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const signupForm = document.getElementById("signupForm");
+    const msg = document.getElementById("msg");
+
+    signupForm.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const newUser = document.getElementById("newUser").value;
+      const newContact = document.getElementById("newContact").value;
+      const newPass = document.getElementById("newPass").value;
+      const confirmPass = document.getElementById("confirmPass").value;
+
+      if (newPass !== confirmPass) {
+        msg.textContent = "Passwords do not match";
+        msg.className = "error";
+        return;
+      }
+
+      localStorage.setItem("username", newUser);
+      localStorage.setItem("password", newPass);
+      localStorage.setItem("contact", newContact);
+
+      msg.textContent = "Account created successfully! Redirecting...";
+      msg.className = "success";
+
+      setTimeout(() => {
+        window.location.href = "file:///C:/Users/SIHS%20PC7/Desktop/TRENDERS%20official/Log%20In.html";
+      }, 2000);
+    });
+  </script>
+</body>
+</html>

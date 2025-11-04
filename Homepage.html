@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trenders - Home</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      background: linear-gradient(45deg, #6F7D7B, #6F7D7B);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(45deg, #6F7D7B, #1E3226);
+      color: #fff;
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: linear-gradient(45deg, #1E3226, #6F7D7B);
+    }
+
+    nav a {
+      color: #fff;
+      padding: 1rem 1.5rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .container {
+      width: 85%;
+      margin: 2rem auto;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    section h2 {
+      margin-bottom: 1rem;
+      background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #fd1d1d, #e1306c);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      font-size: 1.8rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .project-card {
+      background: linear-gradient(135deg, #ffffff, #f3f4f6);
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 1s, box-shadow 0.3s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .add-to-cart {
+      margin-top: 1rem;
+      background-color: #2575fc;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .add-to-cart:hover {
+      background-color: #1a5ed9;
+    }
+
+    footer {
+      background: linear-gradient(45deg, #1E3226, #6F7D7B);
+      color: #fff;
+      text-align: center;
+      padding: 2rem;
+      width: 100%;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    #contact ul {
+      list-style: none;
+      margin-top: 1rem;
+    }
+
+    #contact li {
+      margin: 0.5rem 0;
+    }
+
+    #contact a {
+      color: #2575fc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    #contact a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+
+      nav {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <a href="file:///C:/Users/Administrator/Desktop/TRENDERS/homepage.html" style="text-decoration: none; color: white;">
+      <h1>TRENDERS</h1>
+    </a>
+    <p>Stylish | Luxurious | Elegant</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="file:///C:/Users/SIHS%20PC7/Desktop/TRENDERS%20official/Books.html">Books</a>
+    <a href="file:///C:/Users/SIHS%20PC7/Desktop/TRENDERS%20official/Gadgets.html">Gadgets</a>
+    <a href="file:///C:/Users/SIHS%20PC7/Desktop/TRENDERS%20official/Beauty%20And%20Fashion.html">Beauty & Fashion</a>
+    <a href="file:///C:/Users/SIHS%20PC7/Desktop/TRENDERS%20official/Food.html">Food</a>
+    <a href="file:///C:/Users/SIHS%20PC7/Desktop/TRENDERS%20official/Home%20Products.html">Home Products</a>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container">
+
+    <section id="projects">
+      <h2>Recommended</h2>
+      <div class="projects">
+        <div class="project-card">
+          <img src="https://cdn.shopify.com/s/files/1/0670/7688/2653/files/86fb9f06-1525-4b23-b257-805885ac798a-1_d60e4f68-d823-4bc0-b840-16b850cb12fa.png?v=1727445542" alt="iPhone 16 Pro Max">
+          <h3>iPhone 16 Pro Max</h3>
+          <p>The latest iPhone with cutting-edge features and a stunning design. Experience the best of technology.</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+
+        <div class="project-card">
+          <img src="https://static1.pocketlintimages.com/wordpress/wp-content/uploads/2025/01/galaxy-s25ultra-16by9.jpg" alt="Samsung S25 Ultra">
+          <h3>Samsung S25 Ultra</h3>
+          <p>A powerhouse smartphone with an incredible camera and display. Perfect for photography enthusiasts.</p>
+          <button class="add-to-cart">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>2025 Trenders. All Rights Reserved ©.</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trenders - Log In</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #1E3226;
+    }
+
+    .login-box {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 10px;
+      width: 360px;
+      text-align: center;
+    }
+
+    .site-name {
+      font-size: 28px;
+      font-weight: bold;
+      color: #1E3226;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    .input-group {
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+
+    .input-group label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      outline: none;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      background-color: #1E3226;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background-color: #2d4d39;
+    }
+
+    .error {
+      color: red;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .signup-link {
+      margin-top: 1rem;
+      font-size: 14px;
+    }
+
+    .signup-link a {
+      color: red;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .signup-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-box">
+    <div class="site-name">TRENDERS</div>
+    <h2>Log In</h2>
+    <form id="loginForm">
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" required>
+      </div>
+      <div class="input-group">
+        <label for="contact">Contact Number</label>
+        <input type="text" id="contact" required>
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" required>
+      </div>
+      <button type="submit" class="btn">Log In</button>
+    </form>
+    <p class="error" id="errorMsg"></p>
+    <div class="signup-link">
+      <p>Don’t have an account?
+        <a href="file:///C:/Users/SIHS%20PC7/Desktop/TRENDERS%20official/Sign%20In.html">
+          Sign Up
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById("loginForm");
+    const errorMsg = document.getElementById("errorMsg");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const user = document.getElementById("username").value;
+      const contact = document.getElementById("contact").value;
+      const pass = document.getElementById("password").value;
+
+      const savedUser = localStorage.getItem("username");
+      const savedContact = localStorage.getItem("contact");
+      const savedPass = localStorage.getItem("password");
+
+      if (user === savedUser && pass === savedPass && contact === savedContact) {
+        window.location.href = "file:///C:/Users/SIHS%20PC7/Desktop/TRENDERS%20official/Homepage.html";
+      } else {
+        errorMsg.textContent = "Invalid username, contact, or password.";
+      }
+    });
+  </script>
+</body>
+</html>
